@@ -1,7 +1,0 @@
-Year,Genre,Director,Lead Actor,Production Company,Runtime (min),Country,Language,success_probability,predicted_success,actual_success,correct_prediction
-2012,"Action, Thriller",Christopher Nolan,Christian Bale,Warner Bros. Pictures,164,USA / UK,English,0.921639848602865,1,1,1
-2018,Fantasy,Guillermo del Toro,Maribel Verdú,Warner Bros.,126,Mexico,Spanish,0.5833333333333348,1,0,0
-2014,"Drama, Music",Damien Chazelle,Miles Teller,Blumhouse Productions,106,USA,English,0.5367655871901101,1,0,0
-2017,"Fantasy, Drama",Guillermo del Toro,Sally Hawkins,TSG Entertainment,123,USA,English,0.4240837696335057,0,0,1
-2014,Biography,James Marsh,Kate Winslet,Pathé,118,UK,English,0.2605256295094314,0,0,1
-2021,"Sci-Fi, Adventure",Denis Villeneuve,Timothée Chalamet,Legendary Pictures,155,USA / Canada,English,0.09689439032477055,0,0,1

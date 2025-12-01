@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix, classification_report
+import os
 
 class NaiveBayes:
     def __init__(self):
@@ -85,7 +86,7 @@ class NaiveBayes:
         probabilities = self.predict_proba(X)
         return self.classes[np.argmax(probabilities, axis=1)]
 
-
+os.makedirs("visuals_naive", exist_ok=True) 
 
 print("="*70)
 print("MOVIE SUCCESS PREDICTION USING NAIVE BAYES")
