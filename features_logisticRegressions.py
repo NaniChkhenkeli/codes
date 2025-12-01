@@ -23,7 +23,7 @@ def ensure_int_matrix(arr):
 
 
 def main():
-    df = pd.read_csv('30movies_dataset.csv').dropna()
+    df = pd.read_csv('90movies_dataset.csv').dropna()
 
     mean_revenue = df['Gross Revenue (million)'].mean()
     df['Success'] = (df['Gross Revenue (million)'] >= mean_revenue).astype(int)
