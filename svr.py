@@ -253,10 +253,7 @@ def analyze_and_visualize():
 
 
 def main():
-    print("=" * 60)
     print("MOVIE REVENUE PREDICTION AND ANALYSIS SYSTEM")
-    print("(Fixed Version - No Data Leakage)")
-    print("=" * 60)
     
     # Step 1: training model and make predictions
     print("\n" + "=" * 60)
