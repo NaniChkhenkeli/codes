@@ -29,7 +29,7 @@ def ensure_int_matrix(arr):
 
 
 def main():
-    df = pd.read_csv('processed_movies_data.csv')
+    df = pd.read_csv('naive_results/processed_movies_data.csv')
 
     feature_groups = {
         'TitleWords': ['Title'],
@@ -184,7 +184,7 @@ def main():
         plt.title('Learning curve (best feature set)')
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig('accuracy_vs_training_size.png')
+        plt.savefig('SVRaccuracy_vs_training_size.png')
         print("Learning curve saved as 'accuracy_vs_training_size.png'")
 
         # minimum samples for max accuracy

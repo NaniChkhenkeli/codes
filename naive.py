@@ -86,7 +86,7 @@ class NaiveBayes:
         probabilities = self.predict_proba(X)
         return self.classes[np.argmax(probabilities, axis=1)]
 
-os.makedirs("visuals_naive", exist_ok=True) 
+os.makedirs("naive_results", exist_ok=True) 
 
 print("="*70)
 print("MOVIE SUCCESS PREDICTION USING NAIVE BAYES")
@@ -178,7 +178,7 @@ df['CountryId'] = df['Country of Origin'].map(country_to_id)
 df['LanguageId'] = df['Original Language'].map(language_to_id)
 
 # Save processed data
-df.to_csv('processed_movies_data.csv', index=False)
+df.to_csv('naive_results/processed_movies_data.csv', index=False)
 print("\nProcessed data saved to: 'processed_movies_data.csv'")
 
 # Verify the DataFrame
@@ -277,7 +277,7 @@ results_df = df_test[['Year', 'Genre', 'Director', 'Lead Actor', 'Production Com
 
 # Add prediction correctness column
 results_df['correct_prediction'] = (results_df['predicted_success'] == results_df['actual_success']).astype(int)
-results_df.to_csv('movie_success_predictions_naive_bayes.csv', index=False)
+results_df.to_csv('naive_results/movie_success_predictions_naive_bayes.csv', index=False)
 
 print("\n" + "="*70)
 print("RESULTS SAVED")
@@ -311,7 +311,7 @@ print(top_predictions[['Year', 'Genre', 'Director', 'Lead Actor', 'success_proba
                        'predicted_success', 'actual_success', 'correct_prediction']].to_string())
 
 # Save top predictions
-top_predictions.to_csv('top_10_success_predictions.csv', index=False)
+top_predictions.to_csv('naive_results/top_10_success_predictions.csv', index=False)
 print("\nTop 10 predictions saved to: 'top_10_success_predictions.csv'")
 
 # Correct vs Incorrect predictions analysis
@@ -331,8 +331,8 @@ if len(incorrect_pred_df) > 0:
 else:
     print("No incorrect predictions found")
 
-correct_pred_df.to_csv('correct_predictions.csv', index=False)
-incorrect_pred_df.to_csv('incorrect_predictions.csv', index=False)
+correct_pred_df.to_csv('naive_results/correct_predictions.csv', index=False)
+incorrect_pred_df.to_csv('naive_results/incorrect_predictions.csv', index=False)
 print("\nCorrect predictions saved to: 'correct_predictions.csv'")
 print("Incorrect predictions saved to: 'incorrect_predictions.csv'")
 
